@@ -25,7 +25,7 @@ export default function Hero() {
                         </p>
                         <ButtonScrollable
                             targetId="contact"
-                            className="mt-10 inline-flex items-center gap-x-2 rounded-md bg-primary px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors duration-300 hover:bg-accent hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                            className="mt-10 inline-flex items-center gap-x-2 rounded-md bg-primary px-6 py-3 text-lg tracking-wide font-semibold font-header text-white shadow-sm transition-colors duration-300 hover:bg-accent hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                         >
                             Запланируйте Консультацию
                             <ChatBubbleOvalLeftEllipsisIcon
