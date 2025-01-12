@@ -27,7 +27,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="ru" className={`${mulish.variable} ${raleway.variable}`}>
+        <html
+            lang="ru"
+            className={`${mulish.variable} ${raleway.variable} bg-neutral`}
+        >
             <body>{children}</body>
         </html>
     );
