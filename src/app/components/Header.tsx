@@ -25,7 +25,7 @@ export default function Header() {
                         <span className="sr-only">Your Company</span>
                         <img
                             alt=""
-                            src="https://tailwindui.com/plus/img/logos/mark.svg?color=blue&shade=600"
+                            src="https://tailwindui.com/plus/img/logos/mark.svg?color=teal&shade=600"
                             className="h-8 w-auto"
                         />
                     </a>
@@ -72,7 +72,7 @@ export default function Header() {
                             <span className="sr-only">Your Company</span>
                             <img
                                 alt=""
-                                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+                                src="https://tailwindui.com/plus/img/logos/mark.svg?color=teal&shade=600"
                                 className="h-8 w-auto"
                             />
                         </a>
@@ -89,22 +89,24 @@ export default function Header() {
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
                                 {navigation.map((item) => (
-                                    <a
+                                    <ButtonScrollable
                                         key={item.name}
-                                        href={item.href}
-                                        className="-mx-3 block font-header rounded-lg px-3 py-2 text-base/7 font-semibold hover:bg-accent/20"
+                                        targetId={item.href}
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-xl/8 tracking-wide font-semibold font-header hover:bg-accent/20"
                                     >
                                         {item.name}
-                                    </a>
+                                    </ButtonScrollable>
                                 ))}
                             </div>
-                            <div className="py-6">
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold hover:bg-accent/20"
+                            <div className="py-10">
+                                <ButtonScrollable
+                                    targetId="contact"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="px-5 py-3 rounded-xl text-neutral text-xl/8 tracking-wide font-semibold font-header transition-colors duration-300 bg-primary hover:bg-accent hover:text-charcoal"
                                 >
-                                    Log in
-                                </a>
+                                    Консультация
+                                </ButtonScrollable>
                             </div>
                         </div>
                     </div>
