@@ -38,7 +38,7 @@ export default function Contact() {
                                         className="size-6 shrink-0 text-gray-600"
                                     />
                                     <span className="ml-3">
-                                        (343) 300-94-35
+                                        +7 (343) 300-94-35
                                     </span>
                                 </dd>
                             </div>
