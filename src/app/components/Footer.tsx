@@ -6,7 +6,7 @@ const navigation = {
     main: [
         { name: "Обо мне", href: "about" },
         { name: "Услуги", href: "services" },
-        { name: "Отзывы", href: "testimonials" },
+        { name: "Отзывы", href: "testimonials-cta" },
         { name: "Консультация", href: "contact" },
     ],
     social: [

@@ -4,6 +4,7 @@ import {
     UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Form from "./Form";
 
 export default function Contact() {
     return (
@@ -72,72 +73,7 @@ export default function Contact() {
                 </div>
                 <div className="bg-white/60 px-6 py-16 lg:col-span-3 lg:px-8 lg:py-24 xl:pl-12">
                     <div className="mx-auto max-w-lg lg:max-w-none">
-                        <form
-                            action="#"
-                            method="POST"
-                            className="grid grid-cols-1 gap-y-6"
-                        >
-                            <div>
-                                <label htmlFor="name" className="sr-only">
-                                    Имя
-                                </label>
-                                <input
-                                    id="name"
-                                    name="name"
-                                    type="text"
-                                    placeholder="Имя"
-                                    autoComplete="name"
-                                    className="block w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-500 shadow-sm outline-accent focus:border-primary focus:ring-primary"
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="email" className="sr-only">
-                                    Почта
-                                </label>
-                                <input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    placeholder="Почта"
-                                    autoComplete="email"
-                                    className="block w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-500 shadow-sm outline-accent focus:border-primary focus:ring-primary"
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="phone" className="sr-only">
-                                    Телефон
-                                </label>
-                                <input
-                                    id="phone"
-                                    name="phone"
-                                    type="text"
-                                    placeholder="Телефон"
-                                    autoComplete="tel"
-                                    className="block w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-500 shadow-sm outline-accent focus:border-primary focus:ring-primary"
-                                />
-                            </div>
-                            <div>
-                                <label htmlFor="message" className="sr-only">
-                                    Сообщение
-                                </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows={4}
-                                    placeholder="Сообщение"
-                                    className="block w-full rounded-md border border-gray-300 px-4 py-3 placeholder-gray-500 shadow-sm outline-accent focus:border-primary focus:ring-primary"
-                                    defaultValue={""}
-                                />
-                            </div>
-                            <div>
-                                <button
-                                    type="submit"
-                                    className="mt-10 inline-flex items-center gap-x-2 rounded-md bg-accent px-6 py-3 text-base font-semibold text-charcoal shadow-sm transition-colors duration-300 hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                                >
-                                    Отправить
-                                </button>
-                            </div>
-                        </form>
+                        <Form />
                     </div>
                 </div>
             </div>

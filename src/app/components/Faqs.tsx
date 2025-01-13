@@ -3,22 +3,29 @@ import {
     DisclosureButton,
     DisclosurePanel,
 } from "@headlessui/react";
-import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
+import { PlusIcon } from "@heroicons/react/24/outline";
 
 const faqs = [
     {
-        question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+        question: "Какие заболевания вы лечите?",
+        answer: "Я специализируюсь на лечении головной и лицевой боли, включая мигрень, кластерные головные боли и другие формы орофациальной боли.",
     },
     {
-        question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+        question: "Как проходит консультация?",
+        answer: "На консультации я провожу тщательный сбор анамнеза, осмотр и, при необходимости, назначаю дополнительные обследования. Мы также обсуждаем возможные планы лечения.",
     },
     {
-        question: "What's the best thing about Switzerland?",
-        answer: "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+        question: "Вы используете доказательную медицину в своей практике?",
+        answer: "Да, я изучала курс доказательной медицины для врачей и регулярно применяю современные и проверенные методы лечения.",
     },
-    // More questions...
+    {
+        question: "На каких языках вы принимаете пациентов?",
+        answer: "Я принимаю пациентов на русском и английском языках, так как регулярно читаю профессиональную литературу на этих языках.",
+    },
+    {
+        question: "Как часто нужно посещать специалиста при хронической боли?",
+        answer: "Частота посещений зависит от вашего состояния и рекомендаций по лечению. Обычно мы планируем регулярные визиты для контроля симптомов и эффективности терапии.",
+    },
 ];
 
 export default function Faqs() {
@@ -38,13 +45,9 @@ export default function Faqs() {
                                             {faq.question}
                                         </span>
                                         <span className="ml-6 flex h-7 items-center">
-                                            <PlusSmallIcon
+                                            <PlusIcon
                                                 aria-hidden="true"
-                                                className="size-6 group-data-[open]:hidden"
-                                            />
-                                            <MinusSmallIcon
-                                                aria-hidden="true"
-                                                className="size-6 group-[&:not([data-open])]:hidden"
+                                                className="size-5 transform transition-transform duration-300 group-data-[open]:rotate-45"
                                             />
                                         </span>
                                     </DisclosureButton>

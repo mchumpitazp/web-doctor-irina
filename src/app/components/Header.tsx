@@ -8,7 +8,7 @@ import ButtonScrollable from "./ButtonScrollable";
 const navigation = [
     { name: "Обо мне", href: "about" },
     { name: "Услуги", href: "services" },
-    { name: "Отзывы", href: "testimonials" },
+    { name: "Отзывы", href: "testimonials-cta" },
 ];
 
 export default function Header() {
@@ -45,7 +45,7 @@ export default function Header() {
                         <ButtonScrollable
                             key={item.name}
                             targetId={item.href}
-                            className="text-lg/6 font-semibold font-header transition-colors duration-300 hover:text-primary"
+                            className="text-base/6 font-semibold font-header transition-colors duration-300 hover:text-primary"
                         >
                             {item.name}
                         </ButtonScrollable>
@@ -54,7 +54,7 @@ export default function Header() {
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <ButtonScrollable
                         targetId="contact"
-                        className="px-6 py-3 rounded-xl text-neutral text-lg/6 tracking-wide font-semibold font-header transition-colors duration-300 bg-primary hover:bg-accent hover:text-charcoal"
+                        className="px-6 py-3 rounded-xl text-neutral text-base/6 tracking-wide font-semibold font-header transition-colors duration-300 bg-primary hover:bg-accent hover:text-charcoal"
                     >
                         Консультация
                     </ButtonScrollable>
@@ -93,7 +93,7 @@ export default function Header() {
                                         key={item.name}
                                         targetId={item.href}
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-xl/8 tracking-wide font-semibold font-header hover:bg-accent/20"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-lg/8 tracking-wide font-semibold font-header hover:bg-accent/20"
                                     >
                                         {item.name}
                                     </ButtonScrollable>
@@ -103,7 +103,7 @@ export default function Header() {
                                 <ButtonScrollable
                                     targetId="contact"
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className="px-5 py-3 rounded-xl text-neutral text-xl/8 tracking-wide font-semibold font-header transition-colors duration-300 bg-primary hover:bg-accent hover:text-charcoal"
+                                    className="px-5 py-3 rounded-xl text-neutral text-lg/8 tracking-wide font-semibold font-header transition-colors duration-300 bg-primary hover:bg-accent hover:text-charcoal"
                                 >
                                     Консультация
                                 </ButtonScrollable>

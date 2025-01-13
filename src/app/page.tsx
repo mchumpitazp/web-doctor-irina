@@ -6,6 +6,7 @@ import Faqs from "./components/Faqs";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Certificates from "./components/Certificates";
+import TestimonialsCTA from "./components/TestimonialsCTA";
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
             <Services />
             <Contact />
             <Faqs />
+            <TestimonialsCTA />
             <Footer />
         </main>
     );

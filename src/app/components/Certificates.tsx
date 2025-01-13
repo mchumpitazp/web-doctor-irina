@@ -90,6 +90,7 @@ export default function Certificates() {
                                     fill
                                     src={cert.src}
                                     alt={cert.alt}
+                                    sizes="(max-width: 480px) 90vw, (max-width: 768px) 45vw, (max-width: 1200px) 30vw, 15vw"
                                     className="object-contain p-4"
                                 />
                             </figure>
