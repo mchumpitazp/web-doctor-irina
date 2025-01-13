@@ -33,6 +33,7 @@ export default function Form() {
             }
         }
 
+        setError(null);
         return true;
     };
 
