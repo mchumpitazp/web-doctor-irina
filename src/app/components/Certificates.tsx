@@ -83,7 +83,7 @@ export default function Certificates() {
             <Slider {...settings}>
                 {certificates.map((cert: Certificate, index: number) => (
                     <div key={index} className="px-2">
-                        <Link href={cert.pdf} target="_blank">
+                        <Link href={cert.pdf} target="_blank" prefetch={false}>
                             <figure className="relative h-64 w-full">
                                 <Image
                                     priority

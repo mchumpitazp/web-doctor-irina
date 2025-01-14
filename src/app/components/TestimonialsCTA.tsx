@@ -33,7 +33,7 @@ export default function TestimonialsCTA() {
                             className="flex items-center gap-x-2 rounded-md bg-charcoal px-8 py-4 text-lg font-semibold text-white shadow-sm transition-colors duration-300 hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                         >
                             Все отзывы и подробности
-                            <ArrowTopRightOnSquareIcon className="size-6" />
+                            <ArrowTopRightOnSquareIcon className="size-5" />
                         </Link>
                     </div>
                 </div>
