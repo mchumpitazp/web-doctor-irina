@@ -36,11 +36,11 @@ export default function Hero() {
                     </div>
                     <Image
                         alt="Hero Image"
-                        src="/images/hero-image.png"
+                        src="/images/hero-image.webp"
                         width={0}
                         height={0}
-                        sizes="(max-width: 640px) 90vw, (max-width: 1200px) 50vw, 33vw"
-                        className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="-scale-x-100 mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
                         priority
                     />
                 </div>

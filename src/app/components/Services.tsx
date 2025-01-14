@@ -16,11 +16,31 @@ export default function Services() {
                                     Онлайн-консультация
                                 </p>
                                 <p className="mt-2 max-w-lg text-base/6 text-gray-600 max-lg:text-center">
-                                    Консультация для диагностики и лечения боли
-                                    онлайн.
+                                    Подходит для тех , кто уже был на очном
+                                    приеме врача и хочет получить второе мнение
+                                    по плану лечения и обследований.
                                 </p>
+                                <p className="mt-2">
+                                    Популярные запросы, на которые я отвечаю:
+                                </p>
+                                <ul className="mt-2 list-disc ps-4 ">
+                                    <li>
+                                        Неврология: разбор жалоб, назначений,
+                                        обследований
+                                    </li>
+                                    <li>
+                                        Второе мнение по плану лечения и
+                                        обследований
+                                    </li>
+                                    <li>
+                                        Головная боль, боль в лице,
+                                        головокружение
+                                    </li>
+                                    <li>Тревога, депрессия, нарушение сна</li>
+                                    <li>Деменция</li>
+                                </ul>
                             </div>
-                            <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                            <div className="relative min-h-[17rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
                                 <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
                                     <Image
                                         width={0}
