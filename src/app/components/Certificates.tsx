@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
 
 interface Certificate {
-    pdf: string;
+    preview: string;
     src: string;
     alt: string;
 }
@@ -15,38 +15,38 @@ interface Certificate {
 export default function Certificates() {
     const certificates: Certificate[] = [
         {
-            pdf: "/certificates-pdf/certificate-1.pdf",
-            src: "/certificates-images/certificate-1.webp",
+            preview: "/certificates/preview-certificate-1.webp",
+            src: "/certificates/certificate-1.webp",
             alt: "Certificate 1",
         },
         {
-            pdf: "/certificates-pdf/certificate-2.pdf",
-            src: "/certificates-images/certificate-2.webp",
+            preview: "/certificates/preview-certificate-2.webp",
+            src: "/certificates/certificate-2.webp",
             alt: "Certificate 2",
         },
         {
-            pdf: "/certificates-pdf/certificate-3.pdf",
-            src: "/certificates-images/certificate-3.webp",
+            preview: "/certificates/preview-certificate-3.webp",
+            src: "/certificates/certificate-3.webp",
             alt: "Certificate 3",
         },
         {
-            pdf: "/certificates-pdf/certificate-4.pdf",
-            src: "/certificates-images/certificate-4.webp",
+            preview: "/certificates/preview-certificate-4.webp",
+            src: "/certificates/certificate-4.webp",
             alt: "Certificate 4",
         },
         {
-            pdf: "/certificates-pdf/certificate-4.pdf",
-            src: "/certificates-images/certificate-5.webp",
+            preview: "/certificates/preview-certificate-4.webp",
+            src: "/certificates/certificate-5.webp",
             alt: "Certificate 5",
         },
         {
-            pdf: "/certificates-pdf/certificate-6.pdf",
-            src: "/certificates-images/certificate-6.webp",
+            preview: "/certificates/preview-certificate-6.webp",
+            src: "/certificates/certificate-6.webp",
             alt: "Certificate 6",
         },
         {
-            pdf: "/certificates-pdf/certificate-7.pdf",
-            src: "/certificates-images/certificate-7.webp",
+            preview: "/certificates/preview-certificate-7.webp",
+            src: "/certificates/certificate-7.webp",
             alt: "Certificate 7",
         },
     ];
@@ -83,7 +83,11 @@ export default function Certificates() {
             <Slider {...settings}>
                 {certificates.map((cert: Certificate, index: number) => (
                     <div key={index} className="px-2">
-                        <Link href={cert.pdf} target="_blank" prefetch={false}>
+                        <Link
+                            href={cert.preview}
+                            target="_blank"
+                            prefetch={false}
+                        >
                             <figure className="relative h-64 w-full">
                                 <Image
                                     priority
