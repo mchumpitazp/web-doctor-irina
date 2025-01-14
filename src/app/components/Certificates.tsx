@@ -35,7 +35,7 @@ export default function Certificates() {
             alt: "Certificate 4",
         },
         {
-            preview: "/certificates/preview-certificate-4.webp",
+            preview: "/certificates/preview-certificate-5.webp",
             src: "/certificates/certificate-5.webp",
             alt: "Certificate 5",
         },
