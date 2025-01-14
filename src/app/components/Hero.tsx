@@ -12,14 +12,14 @@ export default function Hero() {
             <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
                     <h1 className="max-w-2xl text-balance text-5xl font-semibold font-header tracking-tight text-primary sm:text-7xl lg:col-span-2 xl:col-auto">
-                        Доктор <br /> Ирина Николаевна
+                        Доктор <br /> Прудникова Ирина Николаевна
                     </h1>
                     <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
                         <p className="text-pretty text-lg font-medium sm:text-xl/9">
-                            Современная медицина для лечения головной и лицевой
-                            боли. Я уделяю особое внимание каждому пациенту,
-                            использую передовые методы диагностики и лечения.
-                            Регулярно обучаюсь у ведущих специалистов и читаю
+                            Современная медицина для лечения головной и боли. Я
+                            уделяю особое внимание каждому пациенту, использую
+                            передовые методы диагностики и лечения. Регулярно
+                            обучаюсь у ведущих специалистов и читаю
                             профессиональную литературу, чтобы быть уверенной в
                             качестве предоставляемой помощи.
                         </p>

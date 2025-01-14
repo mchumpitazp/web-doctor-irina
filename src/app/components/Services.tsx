@@ -4,12 +4,9 @@ export default function Services() {
     return (
         <div id="services" className="py-16 sm:py-24">
             <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-                <h2 className="text-center text-base/7 font-semibold text-accent">
-                    Забота и здоровье
-                </h2>
-                <p className="mx-auto mt-2 max-w-xl text-balance text-center text-4xl text-primary font-header font-semibold tracking-tight sm:text-5xl">
+                <h2 className="mx-auto max-w-xl text-balance text-center text-4xl text-primary font-header font-semibold tracking-tight sm:text-5xl">
                     Услуги для вашего благополучия
-                </p>
+                </h2>
                 <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
                     <div className="relative lg:row-span-2">
                         <div className="absolute inset-px rounded-lg bg-white/60 lg:rounded-l-[2rem]"></div>

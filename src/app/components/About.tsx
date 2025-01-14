@@ -13,23 +13,19 @@ export default function Example() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                     <div className="col-span-2">
-                        <h2 className="text-lg/8 font-semibold text-accent">
-                            Ваш надежный врач
-                        </h2>
-                        <p className="mt-2 text-pretty font-header text-4xl font-semibold tracking-tight text-primary sm:text-5xl">
+                        <h2 className="text-pretty font-header text-4xl font-semibold tracking-tight text-primary sm:text-5xl">
                             Обо мне
-                        </p>
+                        </h2>
                         <p className="mt-6 text-lg/9 text-pretty">
-                            Цефалголог, специалист по орофациальной боли
-                            (специалист по головной и лицевой боли). Много
-                            обучаюсь, учусь у лучших, регулярно повышаю
+                            Невролог, цефалголог - специалист по головной боли.
+                            Много обучаюсь, учусь у лучших, регулярно повышаю
                             квалификацию. Изучала курс доказательной медицины
                             для врачей, постоянно читаю профессиональную
                             литературу на русском и английском языке.
                         </p>
                     </div>
                     <div className="col-span-3">
-                        <h3 className="font-header font-semibold text-xl text-primary mb-6">
+                        <h3 className="mt-2 font-header font-semibold text-xl text-primary mb-6">
                             Владение методами:
                         </h3>
                         <dl className="grid grid-cols-1 gap-x-8 gap-y-10 text-lg/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
