@@ -100,6 +100,7 @@ export default function Header() {
                             alt="Logo"
                             src="/apple-touch-icon.png"
                             className="rounded-full w-auto"
+                            priority
                         />
                     </a>
 
