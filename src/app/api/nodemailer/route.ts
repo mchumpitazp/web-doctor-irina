@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
                 // Validate file type
                 if (!allowedMimeTypes.includes(file.type)) {
                     return NextResponse.json(
-                        { message: `Error: Invalid file type: ${file.type}` },
+                        { message: `Error Invalid file type: ${file.type}` },
                         { status: 400 }
                     );
                 }
