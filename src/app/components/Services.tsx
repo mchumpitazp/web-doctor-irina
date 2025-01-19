@@ -1,4 +1,6 @@
 import Image from "next/image";
+import ButtonScrollableExternal from "./ButtonScrollableExternal";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export default function Services() {
     return (
@@ -15,7 +17,7 @@ export default function Services() {
                                 <p className="mt-2 text-xl font-medium tracking-tight max-lg:text-center">
                                     Онлайн-консультация
                                 </p>
-                                <p className="mt-2 max-w-lg text-base/6 text-gray-600 max-lg:text-center">
+                                <p className="mt-2">
                                     Подходит для тех , кто уже был на очном
                                     приеме врача и хочет получить второе мнение
                                     по плану лечения и обследований.
@@ -39,6 +41,15 @@ export default function Services() {
                                     <li>Тревога, депрессия, нарушение сна</li>
                                     <li>Деменция</li>
                                 </ul>
+                                <ButtonScrollableExternal
+                                    targetPage="/services"
+                                    targetId="service-consultation"
+                                    scrollOffset={50}
+                                    className="mt-4 group font-semibold text-primary text-base flex items-center"
+                                >
+                                    Читать дальше{" "}
+                                    <ArrowRightIcon className="ms-1 size-4 stroke-2 transition duration-300 group-hover:translate-x-1" />
+                                </ButtonScrollableExternal>
                             </div>
                             <div className="relative min-h-[17rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
                                 <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
@@ -66,6 +77,15 @@ export default function Services() {
                                     Снятие мышечного напряжения и устранение
                                     триггерных точек.
                                 </p>
+                                <ButtonScrollableExternal
+                                    targetPage="/services"
+                                    targetId="service-needles"
+                                    scrollOffset={50}
+                                    className="mt-4 group font-semibold text-primary text-base flex items-center"
+                                >
+                                    Читать дальше{" "}
+                                    <ArrowRightIcon className="ms-1 size-4 stroke-2 transition duration-300 group-hover:translate-x-1" />
+                                </ButtonScrollableExternal>
                             </div>
                             <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
                                 <Image
@@ -116,6 +136,15 @@ export default function Services() {
                                     Поддержка мышц, ускорение восстановления и
                                     снижение боли.
                                 </p>
+                                <ButtonScrollableExternal
+                                    targetPage="/services"
+                                    targetId="service-tapes"
+                                    scrollOffset={50}
+                                    className="mt-4 group font-semibold text-primary text-base flex items-center"
+                                >
+                                    Читать дальше{" "}
+                                    <ArrowRightIcon className="ms-1 size-4 stroke-2 transition duration-300 group-hover:translate-x-1" />
+                                </ButtonScrollableExternal>
                             </div>
                             <div className="relative min-h-[30rem] w-full grow">
                                 <div className="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl shadow-2xl">

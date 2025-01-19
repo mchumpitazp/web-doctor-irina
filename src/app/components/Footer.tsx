@@ -1,6 +1,6 @@
 import { JSX, SVGProps } from "react";
-import ButtonScrollable from "./ButtonScrollable";
 import Link from "next/link";
+import ButtonScrollableExternal from "./ButtonScrollableExternal";
 
 const navigation = {
     main: [
@@ -87,13 +87,14 @@ export default function Footer() {
                     className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
                 >
                     {navigation.main.map((item) => (
-                        <ButtonScrollable
+                        <ButtonScrollableExternal
                             key={item.name}
+                            targetPage="/"
                             targetId={item.href}
                             className="hover:text-gray-900 hover:font-medium"
                         >
                             {item.name}
-                        </ButtonScrollable>
+                        </ButtonScrollableExternal>
                     ))}
                 </nav>
                 <div className="mt-16 flex justify-center gap-x-10">
@@ -110,7 +111,8 @@ export default function Footer() {
                     ))}
                 </div>
                 <p className="mt-10 text-center text-sm/6 text-gray-600">
-                    &copy; 2025 Доктор Ирина Николаевна. Все права защищены.
+                    &copy; 2025 Доктор Прудникова Ирина Николаевна. Все права
+                    защищены.
                 </p>
             </div>
         </footer>

@@ -3,9 +3,9 @@
 import { JSX, SVGProps, useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import ButtonScrollable from "./ButtonScrollable";
 import Link from "next/link";
 import Image from "next/image";
+import ButtonScrollableExternal from "./ButtonScrollableExternal";
 
 const navigation = {
     main: [
@@ -133,22 +133,24 @@ export default function Header() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.main.map((item) => (
-                        <ButtonScrollable
+                        <ButtonScrollableExternal
                             key={item.name}
+                            targetPage="/"
                             targetId={item.href}
                             className="text-base/6 font-semibold font-header transition-colors duration-300 hover:text-primary"
                         >
                             {item.name}
-                        </ButtonScrollable>
+                        </ButtonScrollableExternal>
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <ButtonScrollable
+                    <ButtonScrollableExternal
+                        targetPage="/"
                         targetId="contact"
                         className="px-6 py-3 rounded-xl text-neutral text-base/6 tracking-wide font-semibold font-header transition-colors duration-300 bg-primary hover:bg-accent hover:text-charcoal"
                     >
                         Консультация
-                    </ButtonScrollable>
+                    </ButtonScrollableExternal>
                 </div>
             </nav>
             <Dialog
@@ -182,24 +184,26 @@ export default function Header() {
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
                                 {navigation.main.map((item) => (
-                                    <ButtonScrollable
+                                    <ButtonScrollableExternal
                                         key={item.name}
+                                        targetPage="/"
                                         targetId={item.href}
                                         onClick={() => setMobileMenuOpen(false)}
                                         className="-mx-3 block rounded-lg px-3 py-2 text-lg/8 tracking-wide font-semibold font-header hover:bg-accent/20"
                                     >
                                         {item.name}
-                                    </ButtonScrollable>
+                                    </ButtonScrollableExternal>
                                 ))}
                             </div>
                             <div className="py-10">
-                                <ButtonScrollable
+                                <ButtonScrollableExternal
+                                    targetPage="/"
                                     targetId="contact"
                                     onClick={() => setMobileMenuOpen(false)}
                                     className="px-5 py-3 rounded-xl text-neutral text-lg/8 tracking-wide font-semibold font-header transition-colors duration-300 bg-primary hover:bg-accent hover:text-charcoal"
                                 >
                                     Консультация
-                                </ButtonScrollable>
+                                </ButtonScrollableExternal>
                                 <div className="flex items-center justify-start gap-x-8 mt-8">
                                     {navigation.social.map((item) => (
                                         <Link

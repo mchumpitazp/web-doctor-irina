@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
 import { Raleway, Mulish } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 // Configure Raleway
 const raleway = Raleway({
@@ -15,12 +16,6 @@ const mulish = Mulish({
     weight: ["400", "500", "700"],
     variable: "--font-body",
 });
-
-export const metadata: Metadata = {
-    title: "Ирина Николаевна",
-    description:
-        "Невролог, цефалголог - специалист по головной боли. Много обучаюсь, учусь у лучших, регулярно повышаю квалификацию. Изучала курс доказательной медицины для врачей, постоянно читаю профессиональную литературу на русском и английском языке.",
-};
 
 export default function RootLayout({
     children,
@@ -52,7 +47,11 @@ export default function RootLayout({
                 />
                 <link rel="manifest" href="/site.webmanifest" />
             </head>
-            <body>{children}</body>
+            <body>
+                <Header />
+                {children}
+                <Footer />
+            </body>
         </html>
     );
 }
