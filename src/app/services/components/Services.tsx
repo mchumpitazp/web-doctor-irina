@@ -1,3 +1,5 @@
+import ButtonScrollableExternal from "@/app/components/ButtonScrollableExternal";
+import { ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 export default function ServicesServices() {
@@ -48,7 +50,7 @@ export default function ServicesServices() {
                             </div>
                         </div>
                     </div>
-                    <div className="order-2">
+                    <div className="order-2 text-center">
                         <div className="mx-auto max-w-xs sm:max-w-md lg:max-w-md">
                             <Image
                                 alt="Product screenshot"
@@ -59,6 +61,17 @@ export default function ServicesServices() {
                                 className="w-full rounded-2xl"
                             />
                         </div>
+                        <ButtonScrollableExternal
+                            targetPage="/"
+                            targetId="contact"
+                            className="mt-12 inline-flex items-center gap-x-2 rounded-md bg-primary px-6 py-3 text-lg tracking-wide font-semibold font-header text-white shadow-sm transition-colors duration-300 hover:bg-accent hover:text-charcoal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                        >
+                            Хочу онлайн-консультация
+                            <ChatBubbleOvalLeftEllipsisIcon
+                                aria-hidden="true"
+                                className="-mr-0.5 size-5"
+                            />
+                        </ButtonScrollableExternal>
                     </div>
 
                     {/* Кинезиотейпирование */}

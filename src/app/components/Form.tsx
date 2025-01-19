@@ -171,8 +171,12 @@ export default function Form() {
                 )}
             </div>
             <div>
-                <label htmlFor="attachments" className="sr-only">
-                    Вложения
+                <label
+                    htmlFor="attachments"
+                    className="text-sm text-charcoal font-medium"
+                >
+                    Прикрепите медицинские документы, если имеются (заключения,
+                    описания МРТ, выписки)
                 </label>
                 <input
                     id="attachments"
@@ -185,14 +189,14 @@ export default function Form() {
                 />
                 <button
                     type="button"
-                    className="text-center text-charcoal cursor-pointer h-11 w-full bg-accent/70 border border-dashed border-accent rounded-lg transition-colors hover:border-primary hover:bg-accent"
+                    className="mt-2 mb-1 text-center text-charcoal cursor-pointer h-11 w-full bg-accent/70 border border-dashed border-accent rounded-lg transition-colors hover:border-primary hover:bg-accent"
                     onClick={() =>
                         document.getElementById("attachments")?.click()
                     }
                 >
                     Загрузить файлы
                 </button>
-                <p className="mt-1 text-gray-500 text-sm">
+                <p className="text-gray-500 text-sm">
                     Форматы: PDF, JPG, JPEG, PNG.
                 </p>
                 {files.map((file, index) => (
