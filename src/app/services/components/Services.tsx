@@ -103,14 +103,14 @@ export default function ServicesServices() {
                         </div>
                     </div>
 
-                    {/* Метод “Сухой иглы” */}
+                    {/* Метод “Сухих игл” */}
                     <div
                         id="service-needles"
                         className="order-5 px-6 lg:px-0 pt-8 lg:pt-0"
                     >
                         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                             <h2 className="text-pretty text-3xl font-header font-semibold tracking-tight text-primary sm:text-5xl">
-                                Метод “Сухой иглы”
+                                Метод “Сухих игл”
                             </h2>
                             <div className="mt-8 text-lg/9 text-charcoal">
                                 <p>

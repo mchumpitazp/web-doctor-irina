@@ -71,7 +71,7 @@ export default function Services() {
                         <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
                             <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                                 <p className="mt-2 text-xl font-medium tracking-tight max-lg:text-center">
-                                    Метод “Сухой иглы”
+                                    Метод “Сухих игл”
                                 </p>
                                 <p className="mt-2 max-w-lg text-base/6 text-gray-600 max-lg:text-center">
                                     Снятие мышечного напряжения и устранение
