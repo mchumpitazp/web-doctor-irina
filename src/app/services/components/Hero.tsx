@@ -18,7 +18,7 @@ export default function ServicesHero() {
                     <h1 className="text-balance text-5xl font-header font-semibold tracking-tight text-primary sm:text-7xl">
                         Услуги для вашего благополучия
                     </h1>
-                    <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+                    <p className="mt-8 text-pretty text-lg font-medium text-charcoal sm:text-xl/8">
                         Индивидуальный подход к каждому пациенту с
                         использованием передовых методов диагностики и лечения
                         для эффективного решения проблем со здоровьем
