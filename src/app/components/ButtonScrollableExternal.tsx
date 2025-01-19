@@ -43,7 +43,7 @@ export default function ButtonScrollableExternal({
 
         if (pathname !== targetPage) {
             router.push(targetPage);
-            setTimeout(() => scrollToElement(), 500);
+            setTimeout(() => scrollToElement(), 700);
         } else {
             scrollToElement();
         }
