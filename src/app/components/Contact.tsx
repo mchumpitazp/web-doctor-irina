@@ -24,10 +24,12 @@ export default function Contact() {
                         </p>
                         <dl className="mt-8 text-base text-gray-600">
                             <div>
-                                <dt className="sr-only">Postal address</dt>
+                                <dt className="sr-only">Адрес</dt>
                                 <dd>
-                                    <p>742 Evergreen Terrace</p>
-                                    <p>Springfield, OR 12345</p>
+                                    <p>
+                                        Россия, Свердловская обл., гор.
+                                        Екатеринбург
+                                    </p>
                                 </dd>
                             </div>
                             <div className="mt-6">

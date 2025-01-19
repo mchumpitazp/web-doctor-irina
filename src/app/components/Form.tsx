@@ -7,11 +7,25 @@ import { FormEvent, useState } from "react";
 
 export default function Form() {
     const [loading, setLoading] = useState<boolean>(false);
+    const [files, setFiles] = useState<File[]>([]);
     const [error, setError] = useState<string | null>(null);
     const [alert, setAlert] = useState<{
         message: string;
         type: "success" | "error";
     } | null>(null);
+
+    // Handle adding files
+    const handleFileAdd = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files) {
+            const newFiles = Array.from(e.target.files);
+            setFiles((prevFiles) => [...prevFiles, ...newFiles]);
+        }
+    };
+
+    // Handle removing files
+    const handleFileRemove = (index: number) => {
+        setFiles((prevFiles) => prevFiles.filter((_, i) => i !== index));
+    };
 
     // Form Validation
     const validateFields = (formData: FormData): boolean => {
@@ -45,6 +59,11 @@ export default function Form() {
         const form = e.currentTarget;
         const formData = new FormData(form);
 
+        // Append files to FormData
+        files.forEach((file) => {
+            formData.append("attachments", file);
+        });
+
         // Validate fields
         if (!validateFields(formData)) {
             setLoading(false);
@@ -61,6 +80,7 @@ export default function Form() {
 
             if (response.ok) {
                 form.reset();
+                setFiles([]);
                 setAlert({
                     message: "Отправленное сообщение",
                     type: "success",
@@ -149,6 +169,47 @@ export default function Form() {
                         Это поле является обязательным
                     </p>
                 )}
+            </div>
+            <div>
+                <label htmlFor="attachments" className="sr-only">
+                    Вложения
+                </label>
+                <input
+                    id="attachments"
+                    name="attachments"
+                    type="file"
+                    multiple
+                    accept=".pdf, .png, .jpg, .jpeg"
+                    className="hidden"
+                    onChange={(e) => handleFileAdd(e)}
+                />
+                <button
+                    type="button"
+                    className="text-center text-charcoal cursor-pointer h-11 w-full bg-accent/70 border border-dashed border-accent rounded-lg transition-colors hover:border-primary hover:bg-accent"
+                    onClick={() =>
+                        document.getElementById("attachments")?.click()
+                    }
+                >
+                    Загрузить файлы
+                </button>
+                <p className="mt-1 text-gray-500 text-sm">
+                    Форматы: PDF, JPG, JPEG, PNG.
+                </p>
+                {files.map((file, index) => (
+                    <div
+                        key={index}
+                        className="mt-2 text-sm text-gray-700 flex items-center"
+                    >
+                        <span className="mr-2">{file.name}</span>
+                        <button
+                            type="button"
+                            onClick={() => handleFileRemove(index)}
+                            className="text-red-600 underline"
+                        >
+                            Удалить
+                        </button>
+                    </div>
+                ))}
             </div>
             <div>
                 <label htmlFor="message" className="sr-only">
