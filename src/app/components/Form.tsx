@@ -96,6 +96,9 @@ export default function Form() {
                 })
             );
 
+            // Remove file inputs from FormData
+            formData.delete("attachments");
+
             // Append file URLs to form data
             fileUploads.forEach((url) => formData.append("fileUrls", url));
 
