@@ -229,7 +229,7 @@ export default function Form() {
                         error === "file-size" ? "text-red-500" : "text-gray-500"
                     } text-sm`}
                 >
-                    Макс. 4MB. Форматы: PDF, JPG, JPEG, PNG.
+                    Макс. 20MB. Форматы: PDF, JPG, JPEG, PNG.
                 </p>
                 {files.map((file, index) => (
                     <div
