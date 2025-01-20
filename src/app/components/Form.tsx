@@ -4,6 +4,8 @@ import {
     ExclamationCircleIcon,
 } from "@heroicons/react/24/outline";
 import { FormEvent, useState } from "react";
+import { type PutBlobResult } from "@vercel/blob";
+import { upload } from "@vercel/blob/client";
 
 export default function Form() {
     const [loading, setLoading] = useState<boolean>(false);
@@ -19,8 +21,8 @@ export default function Form() {
         if (e.target.files) {
             const newFiles = Array.from(e.target.files);
 
-            // Validate file sizes
-            const maxFileSize = 4 * 1024 * 1024; // 4MB
+            // Validate file and limit size to 20MB
+            const maxFileSize = 20 * 1024 * 1024;
             const isValid = newFiles.every((file) => file.size <= maxFileSize);
 
             if (!isValid) {
@@ -70,11 +72,6 @@ export default function Form() {
         const form = e.currentTarget;
         const formData = new FormData(form);
 
-        // Append files to FormData
-        files.forEach((file) => {
-            formData.append("attachments", file);
-        });
-
         // Validate fields
         if (!validateFields(formData)) {
             setLoading(false);
@@ -82,6 +79,26 @@ export default function Form() {
         }
 
         try {
+            // Upload files to Vercel Blob
+            const fileUploads = await Promise.all(
+                files.map(async (file) => {
+                    const newBlob: PutBlobResult = await upload(
+                        file.name,
+                        file,
+                        {
+                            access: "public",
+                            handleUploadUrl: "/api/upload",
+                        }
+                    );
+
+                    // Return the Vercel Blob URL
+                    return newBlob.url;
+                })
+            );
+
+            // Append file URLs to form data
+            fileUploads.forEach((url) => formData.append("fileUrls", url));
+
             const response = await fetch("/api/nodemailer", {
                 method: "post",
                 body: formData,

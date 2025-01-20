@@ -1,6 +1,7 @@
 import { NextResponse, NextRequest } from "next/server";
 import nodemailer from "nodemailer";
 import { Attachment } from "nodemailer/lib/mailer";
+import { del } from "@vercel/blob";
 
 export async function POST(request: NextRequest) {
     const sender = process.env.NODEMAILER_SENDER;
@@ -22,7 +23,7 @@ export async function POST(request: NextRequest) {
         const email = formData.get("email");
         const phone = formData.get("phone");
         const message = formData.get("message");
-        const attachments = formData.getAll("attachments") as File[];
+        const fileUrls = formData.getAll("fileUrls") as string[];
 
         // Validate required fields
         if (!name || !email || !phone || !message) {
@@ -32,35 +33,34 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Validate and process attachments if present
-        const allowedMimeTypes = ["application/pdf", "image/png", "image/jpeg"];
+        // Fetch files from URLs and prepare attachments
         const processedAttachments: Attachment[] = [];
+        for (const fileUrl of fileUrls) {
+            try {
+                const response = await fetch(fileUrl);
 
-        if (attachments.length > 0) {
-            for (const file of attachments) {
-                // Skip invalid files (e.g., empty files or unexpected entries)
-                if (
-                    !file ||
-                    file.size === 0 ||
-                    file.type === "application/octet-stream"
-                ) {
-                    continue;
-                }
-
-                // Validate file type
-                if (!allowedMimeTypes.includes(file.type)) {
-                    return NextResponse.json(
-                        { message: `Error Invalid file type: ${file.type}` },
-                        { status: 400 }
+                if (!response.ok) {
+                    throw new Error(
+                        `Failed to fetch file from URL: ${fileUrl}`
                     );
                 }
 
-                // Convert file to buffer
-                const buffer = Buffer.from(await file.arrayBuffer());
+                const contentType = response.headers.get("content-type");
+                const buffer = await response.arrayBuffer();
+
+                if (!contentType) {
+                    throw new Error(
+                        `Could not determine content type for file: ${fileUrl}`
+                    );
+                }
+
                 processedAttachments.push({
-                    filename: file.name,
-                    content: buffer,
+                    filename: fileUrl.split("/").pop() || "attachment",
+                    content: Buffer.from(buffer),
+                    contentType,
                 });
+            } catch (error) {
+                console.error(`Error fetching file: ${fileUrl}`, error);
             }
         }
 
@@ -106,7 +106,20 @@ export async function POST(request: NextRequest) {
         // Send the email
         await transporter.sendMail(mailOptions);
 
-        return NextResponse.json({ message: "Success: Email was sent" });
+        // Delete files from Vercel Blob after successful email
+        for (const fileUrl of fileUrls) {
+            try {
+                await del(fileUrl);
+                console.log(`Successfully deleted blob: ${fileUrl}`);
+            } catch (error) {
+                console.error(`Failed to delete blob: ${fileUrl}`, error);
+            }
+        }
+
+        // Return successful response
+        return NextResponse.json({
+            message: "Success: Email was sent and files deleted",
+        });
     } catch (error) {
         console.error("Form API Error:" + error);
         NextResponse.json(
