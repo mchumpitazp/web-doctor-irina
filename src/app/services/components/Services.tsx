@@ -16,6 +16,9 @@ export default function ServicesServices() {
                             <h2 className="text-pretty text-3xl font-header font-semibold tracking-tight text-primary sm:text-5xl">
                                 Онлайн-консультация
                             </h2>
+                            <h3 className="mt-4 text-xl sm:text-2xl font-medium text-accent">
+                                Цена: 2 000 руб.
+                            </h3>
                             <div className="mt-8 text-lg/9 text-charcoal">
                                 <p className="indent-8">
                                     Для повторных консультаций пациентов и
@@ -83,6 +86,9 @@ export default function ServicesServices() {
                             <h2 className="text-pretty text-3xl font-header font-semibold tracking-tight text-primary sm:text-5xl">
                                 Кинезиотейпирование
                             </h2>
+                            <h3 className="mt-4 text-xl sm:text-2xl font-medium text-accent">
+                                Цена: 1 000 руб.
+                            </h3>
                             <div className="mt-8 text-lg/9 text-charcoal">
                                 <p className="indent-8">
                                     Один из эффективных способов медицинской
@@ -125,6 +131,9 @@ export default function ServicesServices() {
                             <h2 className="text-pretty text-3xl font-header font-semibold tracking-tight text-primary sm:text-5xl">
                                 Метод “Сухих игл”
                             </h2>
+                            <h3 className="mt-4 text-xl sm:text-2xl font-medium text-accent">
+                                Цена: 1 500 руб.
+                            </h3>
                             <div className="mt-8 text-lg/9 text-charcoal">
                                 <p className="indent-8">
                                     Или по-другому «Dry Needling» — это
