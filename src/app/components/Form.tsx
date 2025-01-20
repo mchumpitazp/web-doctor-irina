@@ -18,6 +18,17 @@ export default function Form() {
     const handleFileAdd = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {
             const newFiles = Array.from(e.target.files);
+
+            // Validate file sizes
+            const maxFileSize = 4 * 1024 * 1024; // 4MB
+            const isValid = newFiles.every((file) => file.size <= maxFileSize);
+
+            if (!isValid) {
+                setError("file-size");
+                return;
+            }
+
+            setError(null);
             setFiles((prevFiles) => [...prevFiles, ...newFiles]);
         }
     };
@@ -196,8 +207,12 @@ export default function Form() {
                 >
                     Загрузить файлы
                 </button>
-                <p className="text-gray-500 text-sm">
-                    Форматы: PDF, JPG, JPEG, PNG.
+                <p
+                    className={`${
+                        error === "file-size" ? "text-red-500" : "text-gray-500"
+                    } text-sm`}
+                >
+                    Макс. 4MB. Форматы: PDF, JPG, JPEG, PNG.
                 </p>
                 {files.map((file, index) => (
                     <div
