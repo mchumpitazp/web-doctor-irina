@@ -1,6 +1,6 @@
 import { ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import ButtonScrollable from "./ButtonScrollable";
+import ButtonScrollable from "../../../components/ButtonScrollable";
 
 export default function Hero() {
     return (

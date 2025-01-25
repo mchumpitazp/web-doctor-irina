@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ButtonScrollableExternal from "./ButtonScrollableExternal";
+import ButtonScrollableExternal from "../../../components/ButtonScrollableExternal";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 

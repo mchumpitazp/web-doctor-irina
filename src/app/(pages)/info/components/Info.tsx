@@ -1,6 +1,6 @@
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
-import DownloadButton from "./DownloadButton";
+import DownloadButton from "@/app/(pages)/info/components/DownloadButton";
 
 export default function Info() {
     return (

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Info from "./components/Info";
+import Info from "@/app/(pages)/info/components/Info";
 
 export const metadata: Metadata = {
     title: "Полная Информация",

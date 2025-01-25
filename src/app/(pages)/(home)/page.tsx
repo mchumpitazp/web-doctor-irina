@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Faqs from "./components/Faqs";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Certificates from "./components/Certificates";
-import TestimonialsCTA from "./components/TestimonialsCTA";
+import Hero from "@/app/(pages)/(home)/components/Hero";
+import Services from "@/app/(pages)/(home)/components/Services";
+import Faqs from "@/app/(pages)/(home)/components/Faqs";
+import About from "@/app/(pages)/(home)/components/About";
+import Contact from "@/app/(pages)/(home)/components/Contact";
+import Certificates from "@/app/(pages)/(home)/components/Certificates";
+import TestimonialsCTA from "@/app/(pages)/(home)/components/TestimonialsCTA";
 
 export const metadata: Metadata = {
     title: "Ирина Николаевна",

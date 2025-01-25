@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
+import Hero from "@/app/(pages)/services/components/Hero";
+import Services from "@/app/(pages)/services/components/Services";
 
 export const metadata: Metadata = {
     title: "Услуги",
