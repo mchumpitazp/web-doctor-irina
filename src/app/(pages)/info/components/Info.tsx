@@ -170,7 +170,7 @@ export default function Info() {
                             Стоимость 1 000 руб
                         </p>
                         <Link
-                            href="https://t.me/Migrebot"
+                            href="https://wa.me/79935042280"
                             target="_blank"
                             className="ms-8 mt-4 w-fit flex items-center text-nowrap px-4 py-2 rounded-xl text-neutral text-sm font-medium tracking-wide transition-colors duration-300 bg-primary hover:bg-accent hover:text-charcoal"
                         >
