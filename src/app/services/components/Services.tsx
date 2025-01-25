@@ -48,7 +48,6 @@ export default function ServicesServices() {
                                         головокружение
                                     </li>
                                     <li>Тревога, депрессия, нарушение сна</li>
-                                    <li>Деменция</li>
                                 </ul>
                             </div>
                         </div>

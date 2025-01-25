@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ButtonScrollableExternal from "./ButtonScrollableExternal";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function Services() {
     return (
@@ -39,7 +40,6 @@ export default function Services() {
                                         головокружение
                                     </li>
                                     <li>Тревога, депрессия, нарушение сна</li>
-                                    <li>Деменция</li>
                                 </ul>
                                 <ButtonScrollableExternal
                                     targetPage="/services"
@@ -111,6 +111,13 @@ export default function Services() {
                                     Планы для предотвращения повторных проблем с
                                     болью.
                                 </p>
+                                <Link
+                                    href="/info"
+                                    className="mt-4 group font-semibold text-primary text-base flex items-center"
+                                >
+                                    Читать дальше{" "}
+                                    <ArrowRightIcon className="ms-1 size-4 stroke-2 transition duration-300 group-hover:translate-x-1" />
+                                </Link>
                             </div>
                             <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
                                 <Image

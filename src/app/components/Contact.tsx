@@ -40,7 +40,7 @@ export default function Contact() {
                                         className="size-6 shrink-0 text-gray-600"
                                     />
                                     <span className="ml-3">
-                                        +7 (343) 300-94-35
+                                        +7 (993) 504 22 80
                                     </span>
                                 </dd>
                             </div>
@@ -52,7 +52,7 @@ export default function Contact() {
                                         className="size-6 shrink-0 text-gray-600"
                                     />
                                     <span className="ml-3">
-                                        support@example.com
+                                        doc-prudnikovain@yandex.ru
                                     </span>
                                 </dd>
                             </div>
