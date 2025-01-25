@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ServicesServices() {
     return (
-        <div className="overflow-hidden py-24 sm:py-32">
+        <div className="overflow-hidden py-12 md:py-24 sm:py-32">
             <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
                 <div className="grid grid-cols-1 gap-y-16 gap-x-8 lg:gap-y-32 lg:grid-cols-2 lg:items-start">
                     {/* Онлайн-консультация */}

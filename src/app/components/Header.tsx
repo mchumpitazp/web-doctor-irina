@@ -152,7 +152,7 @@ export default function Header() {
                                 href={item.href}
                                 target="_blank"
                                 className={`${
-                                    item.name === "Whatsapp" ? "" : "hidden"
+                                    item.name === "Prodoctorov" ? "hidden" : ""
                                 } lg:block text-gray-600 hover:text-gray-800`}
                             >
                                 <span className="sr-only">{item.name}</span>

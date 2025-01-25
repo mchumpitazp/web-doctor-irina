@@ -1,6 +1,6 @@
 export default function ServicesHero() {
     return (
-        <div className="relative isolate px-6 lg:px-8 pt-20">
+        <div className="relative isolate px-6 lg:px-8 pt-32 md:pt-20">
             <div
                 aria-hidden="true"
                 className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -13,7 +13,7 @@ export default function ServicesHero() {
                     className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-accent opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
                 />
             </div>
-            <div className="mx-auto max-w-2xl py-24 lg:py-32">
+            <div className="mx-auto max-w-2xl py-12 md:py-24 lg:py-32">
                 <div className="text-center">
                     <h1 className="text-balance text-5xl font-header font-semibold tracking-tight text-primary sm:text-7xl">
                         Услуги для вашего благополучия
