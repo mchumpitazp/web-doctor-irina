@@ -2,7 +2,7 @@
 
 export default function DownloadButton() {
     const handleDownload = () => {
-        const fileUrl = "/vestibular_rehabilitation.pdf"; // Replace with the actual file name
+        const fileUrl = "/pdf/vestibular_rehabilitation.pdf"; // Replace with the actual file name
         const link = document.createElement("a");
         link.href = fileUrl;
         link.download = "комплекс_упражнений.pdf"; // File name for the downloaded file

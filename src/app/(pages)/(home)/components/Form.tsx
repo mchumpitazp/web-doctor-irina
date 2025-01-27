@@ -6,6 +6,7 @@ import {
 import { FormEvent, useState } from "react";
 import { type PutBlobResult } from "@vercel/blob";
 import { upload } from "@vercel/blob/client";
+import Link from "next/link";
 
 export default function Form() {
     const [isChecked, setIsChecked] = useState<boolean>(false);
@@ -287,13 +288,20 @@ export default function Form() {
                         htmlFor="agreement"
                         className="cursor-pointer select-none text-sm"
                     >
-                        Я согласен с политикой конфиденциальности
+                        Я согласен с{" "}
+                        <Link
+                            href="/pdf/agreement.pdf"
+                            target="_blank"
+                            className="text-primary hover:underline"
+                        >
+                            политикой конфиденциальности
+                        </Link>
                     </label>
                 </div>
                 {error === "checkbox" && (
                     <p className="text-red-600 text-sm mt-2">
                         Вы должны согласиться с нашей политикой
-                        конфиденциальности.
+                        конфиденциальности
                     </p>
                 )}
             </div>
