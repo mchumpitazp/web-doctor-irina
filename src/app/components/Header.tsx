@@ -12,7 +12,7 @@ const navigation = {
         { name: "Обо мне", id: "about" },
         { name: "Услуги", id: "services" },
         { name: "Отзывы", id: "testimonials-cta" },
-        { name: "Инфо", page: "info" },
+        { name: "Полезная Информация", page: "info" },
     ],
     social: [
         {

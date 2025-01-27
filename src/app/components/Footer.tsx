@@ -8,7 +8,7 @@ const navigation = {
         { name: "Услуги", id: "services" },
         { name: "Отзывы", id: "testimonials-cta" },
         { name: "Консультация", id: "contact" },
-        { name: "Инфо", page: "info" },
+        { name: "Полезная Информация", page: "info" },
     ],
     social: [
         {

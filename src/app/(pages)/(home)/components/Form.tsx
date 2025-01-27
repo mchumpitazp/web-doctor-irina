@@ -8,6 +8,7 @@ import { type PutBlobResult } from "@vercel/blob";
 import { upload } from "@vercel/blob/client";
 
 export default function Form() {
+    const [isChecked, setIsChecked] = useState<boolean>(false);
     const [loading, setLoading] = useState<boolean>(false);
     const [files, setFiles] = useState<File[]>([]);
     const [error, setError] = useState<string | null>(null);
@@ -58,6 +59,11 @@ export default function Form() {
                 setError("email-regex");
                 return false;
             }
+        }
+
+        if (!isChecked) {
+            setError("checkbox");
+            return false;
         }
 
         setError(null);
@@ -269,10 +275,33 @@ export default function Form() {
                 )}
             </div>
             <div>
+                <div className="flex items-center gap-x-2">
+                    <input
+                        type="checkbox"
+                        id="agreement"
+                        checked={isChecked}
+                        onChange={(e) => setIsChecked(e.target.checked)}
+                        className="cursor-pointer size-5 accent-accent"
+                    />
+                    <label
+                        htmlFor="agreement"
+                        className="cursor-pointer select-none text-sm"
+                    >
+                        Я согласен с политикой конфиденциальности
+                    </label>
+                </div>
+                {error === "checkbox" && (
+                    <p className="text-red-600 text-sm mt-2">
+                        Вы должны согласиться с нашей политикой
+                        конфиденциальности.
+                    </p>
+                )}
+            </div>
+            <div>
                 <button
                     type="submit"
                     disabled={loading}
-                    className="mt-10 inline-flex items-center gap-x-2 rounded-md bg-accent px-6 py-3 text-base font-semibold text-charcoal shadow-sm transition-colors duration-300 hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    className="mt-5 inline-flex items-center gap-x-2 rounded-md bg-accent px-6 py-3 text-base font-semibold text-charcoal shadow-sm transition-colors duration-300 hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                     {loading ? "Загрузка..." : "Отправить"}
                 </button>
