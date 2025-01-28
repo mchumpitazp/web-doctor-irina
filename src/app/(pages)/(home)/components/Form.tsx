@@ -290,11 +290,19 @@ export default function Form() {
                     >
                         Я согласен с{" "}
                         <Link
-                            href="/pdf/agreement.pdf"
+                            href="/pdf/confidentiality.pdf"
                             target="_blank"
                             className="text-primary hover:underline"
                         >
                             политикой конфиденциальности
+                        </Link>{" "}
+                        и принимаю условия{" "}
+                        <Link
+                            href="/pdf/offer.pdf"
+                            target="_blank"
+                            className="text-primary hover:underline"
+                        >
+                            публичной оферты
                         </Link>
                     </label>
                 </div>

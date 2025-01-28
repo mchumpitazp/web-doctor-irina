@@ -8,7 +8,7 @@ import Certificates from "@/app/(pages)/(home)/components/Certificates";
 import TestimonialsCTA from "@/app/(pages)/(home)/components/TestimonialsCTA";
 
 export const metadata: Metadata = {
-    title: "Ирина Николаевна",
+    title: "Прудникова Ирина Николаевна",
     description:
         "Невролог, цефалголог - специалист по головной боли. Много обучаюсь, учусь у лучших, регулярно повышаю квалификацию. Изучала курс доказательной медицины для врачей, постоянно читаю профессиональную литературу на русском и английском языке.",
     alternates: {
