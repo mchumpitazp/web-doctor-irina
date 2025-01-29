@@ -120,7 +120,7 @@ export default function Form() {
                 form.reset();
                 setFiles([]);
                 setAlert({
-                    message: "Отправленное сообщение",
+                    message: "Сообщение отправлено",
                     type: "success",
                 });
             } else {
