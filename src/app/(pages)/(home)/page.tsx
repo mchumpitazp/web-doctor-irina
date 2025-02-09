@@ -18,14 +18,20 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <main className="font-body font-light bg-neutral text-charcoal">
-            <Hero />
-            <About />
-            <Certificates />
-            <Services />
-            <Contact />
-            <Faqs />
-            <TestimonialsCTA />
-        </main>
+        <>
+            <div itemScope itemType="https://schema.org/WebSite">
+                <link itemProp="url" href="https://doctor-prudnikova.ru" />
+                <meta itemProp="name" content="Прудникова Ирина Николаевна" />
+            </div>
+            <main className="font-body font-light bg-neutral text-charcoal">
+                <Hero />
+                <About />
+                <Certificates />
+                <Services />
+                <Contact />
+                <Faqs />
+                <TestimonialsCTA />
+            </main>
+        </>
     );
 }

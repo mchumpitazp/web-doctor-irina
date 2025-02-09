@@ -79,13 +79,6 @@ export default function RootLayout({
                         />
                     </div>
                 </noscript>
-                <div itemScope itemType="https://schema.org/WebSite">
-                    <link itemProp="url" href="https://doctor-prudnikova.ru" />
-                    <meta
-                        itemProp="name"
-                        content="Прудникова Ирина Николаевна"
-                    />
-                </div>
                 <Header />
                 {children}
                 <Footer />
