@@ -17,7 +17,7 @@ export default function ServicesServices() {
                                 Онлайн-консультация
                             </h2>
                             <h3 className="mt-4 text-xl sm:text-2xl font-medium text-accent">
-                                Цена: 2 000 руб.
+                                Стоимость: 2 000 руб.
                             </h3>
                             <div className="mt-8 text-lg/9 text-charcoal">
                                 <p className="indent-8">
@@ -86,7 +86,7 @@ export default function ServicesServices() {
                                 Кинезиотейпирование
                             </h2>
                             <h3 className="mt-4 text-xl sm:text-2xl font-medium text-accent">
-                                Цена: 1 000 руб.
+                                Стоимость: 1 000 руб.
                             </h3>
                             <div className="mt-8 text-lg/9 text-charcoal">
                                 <p className="indent-8">
@@ -131,7 +131,7 @@ export default function ServicesServices() {
                                 Метод “Сухих игл”
                             </h2>
                             <h3 className="mt-4 text-xl sm:text-2xl font-medium text-accent">
-                                Цена: 1 500 руб.
+                                Стоимость: 2 000 руб.
                             </h3>
                             <div className="mt-8 text-lg/9 text-charcoal">
                                 <p className="indent-8">
