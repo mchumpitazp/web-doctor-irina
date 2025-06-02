@@ -41,6 +41,7 @@ export default function Services() {
                                     </li>
                                     <li>Тревога, депрессия, нарушение сна</li>
                                 </ul>
+                                <p className="mt-2 font-medium">Стоимость: 3 000 руб.</p>
                                 <ButtonScrollableExternal
                                     targetPage="/services"
                                     targetId="service-consultation"
@@ -76,6 +77,9 @@ export default function Services() {
                                 <p className="mt-2 max-w-lg text-base/6 text-gray-600 max-lg:text-center">
                                     Снятие мышечного напряжения и устранение
                                     триггерных точек.
+                                </p>
+                                <p className="mt-2 max-w-lg text-base/6 text-gray-600 max-lg:text-center font-medium">
+                                    Стоимость: 2 000 руб.
                                 </p>
                                 <ButtonScrollableExternal
                                     targetPage="/services"
@@ -142,6 +146,9 @@ export default function Services() {
                                 <p className="mt-2 max-w-lg text-base/6 text-gray-600 max-lg:text-center">
                                     Поддержка мышц, ускорение восстановления и
                                     снижение боли.
+                                </p>
+                                <p className="mt-2 max-w-lg text-base/6 text-gray-600 max-lg:text-center font-medium">
+                                    Стоимость: 1 000 руб.
                                 </p>
                                 <ButtonScrollableExternal
                                     targetPage="/services"

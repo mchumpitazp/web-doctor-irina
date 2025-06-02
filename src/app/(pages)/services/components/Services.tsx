@@ -17,7 +17,7 @@ export default function ServicesServices() {
                                 Онлайн-консультация
                             </h2>
                             <h3 className="mt-4 text-xl sm:text-2xl font-medium text-accent">
-                                Стоимость: 2 000 руб.
+                                Стоимость: 3 000 руб.
                             </h3>
                             <div className="mt-8 text-lg/9 text-charcoal">
                                 <p className="indent-8">
